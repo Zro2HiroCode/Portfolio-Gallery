@@ -3,64 +3,89 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portfolio - ไชโย แสงใส</title>
-  <link rel="stylesheet" href="port.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;500&display=swap" rel="stylesheet">
-
+  <title>เรซูเม่ - ไชโย แสงใส</title>
+  <link rel="stylesheet" href="style2.css">
 </head>
+
 <body>
-  <header class="hero">
-    <img src="IMG2.png" alt="ไชโย แสงใส" class="hero-img" />
-    <h1>ไชโย แสงใส</h1>
-    <p>Chef| อาหารไทย-ยุโรป-ฟิวชั่น</p>
-  </header>
+  <div class="container">
+    <!-- ซ้าย -->
+    <div class="profile-left">
+      <img class="profile-img" src="images/IMG1.png" alt="รูปไชโย" onclick="openLightbox(this.src)">
 
-  <section class="about">
-    <h2>เกี่ยวกับฉัน</h2>
-    <p>ผู้หลงใหลในอาหารทุกรูปแบบ เน้นความสะอาด ความแม่นยำ ความรวดเร็ว และการทำงานเป็นทีม พร้อมเปิดรับความรู้ใหม่ ๆ อยู่เสมอ เริ่มต้นเส้นทางในครัวเมื่ออายุ 24 ปี ด้วยความ</p>
-  </section>
+      <div class="section">
+        <h2 style="font-size: 1em;">ที่อยู่ปัจจุบัน</h2>
+        <p><small>77/49 ม.4 ธีรวรรณอพาร์ทเมนท์<br>ซอย วินิจนัยภาค ถนน ติวานนท์ 7<br>ตำบล ตลาดขวัญ อำเภอ เมืองนนทบุรี<br>จังหวัด นนทบุรี 11000</small></p>
+      </div>
 
-  <section class="experience">
-    <h2>ประสบการณ์</h2>
-    <ul>
-      <li><strong>Craft Estate</strong> - Chef de Partie (2566–2567)</li>
-      <li><strong>Bulwark ราชพฤกษ์</strong> - Chef de Partie (2564–2565)</li>
-      <li><strong>The Salares</strong> - Chef de Partie (2562)</li>
-      <li><strong>บิสโทร เดอ ฟลอร่า</strong> - Chef de Partie (2560–2561)</li>
-      <li><strong>ฟาร์มรักดี</strong> - Head Chef (2558–2560)</li>
-    </ul>
-  </section>
-
-  <section class="skills">
-    <h2>ทักษะ</h2>
-    <ul>
-      <li>อาหารไทย / ยุโรป / ฟิวชั่น</li>
-      <li>บริหารทีม / Multitasking / แก้ปัญหาเฉพาะหน้า</li>
-      <li>ใช้เครื่องมือซูวีด์ / แว็คคั่ม</li>
-      <li>Microsoft Excel</li>
-      <li>จัดทำสูตรอาหาร / คำนวณต้นทุน</li>
-    </ul>
-  </section>
-
-  <section class="portfolio">
-    <h2>แกลเลอรีอาหาร</h2>
-    <div class="gallery">
-      <img src="FOOD1.jpg" alt="จานอาหาร 1">
-      <img src="FOOD2.jpg" alt="จานอาหาร 2">
-      <img src="FOOD3.jpg" alt="จานอาหาร 3">
-      <img src="FOOD4.jpg" alt="จานอาหาร 4">
+      <div class="section">
+        <h2 style="font-size: 1em;">ผลงาน</h2>
+        <img src="images/FOOD1.jpg" alt="ตัวอย่างผลงาน 1" class="sample-img" onclick="openLightbox(this.src)">
+        <img src="images/FOOD2.jpg" alt="ตัวอย่างผลงาน 2" class="sample-img" onclick="openLightbox(this.src)">
+      </div>
     </div>
-  </section>
 
-  <section class="contact">
-    <h2>ติดต่อฉัน</h2>
-    <p>โทร: 062-888-6319</p>
-    <p>Email: saengsaichaiyo@gmail.com</p>
-  </section>
+    <!-- ขวา -->
+    <div class="resume-content">
+      <h1>ไชโย แสงใส</h1>
+      <div class="contact">
+        <p><small class="label">โทร:</small> 062-888-6319</p>
+        <p><small class="label">อีเมล:</small> saengsaichaiyo@gmail.com</p>
+        <p><small class="label">พอร์ตโฟลิโอ:</small> <a href="https://zro2hirocode.github.io/Portfolio-Gallery" target="_blank">Portfolio-Gallery</a></p>
+      </div>
 
-  <footer>
-    <p>&copy; 2025 ไชโย แสงใส</p>
-  </footer>
+      <h2>การศึกษา</h2>
+      <div class="section">
+        <p><strong>มัธยมศึกษาตอนปลาย (ม.6)</strong></p>
+        <p>ศูนย์การศึกษานอกโรงเรียน จังหวัดอุบลราชธานี (2540)</p>
+      </div>
+
+      <h2>ประสบการณ์ทำงาน</h2>
+      <ul>
+        <li>Craft Estate – Chef de partie (ต.ค. 2566 – ต.ค. 2567)</li>
+        <li>Bulwark – Chef de partie (พ.ย. 2564 – มิ.ย. 2565)</li>
+        <li>The Salares Coffee Bar – Chef de partie (มี.ค. 2562 – ธ.ค. 2562)</li>
+        <li>บิสโทร เดอ ฟลอร่า – Chef de partie (ก.ค. 2560 – ธ.ค. 2561)</li>
+        <li>ฟาร์มรักดี – Head Chef (ก.พ. 2558 – พ.ค. 2560)</li>
+      </ul>
+
+      <h2>ทักษะ</h2>
+      <ul>
+        <li>ทักษะการบริหารทีม</li>
+        <li>ทำงานภายใต้ความกดดัน</li>
+        <li>Multitasking (ทำงานหลายอย่างพร้อมกันได้ดี)</li>
+        <li>แก้ไขปัญหาเฉพาะหน้าได้อย่างมีประสิทธิภาพ</li>
+        <li>ใช้เครื่องครัวเฉพาะทาง เช่น ซูวีด์ / แว็คคั่ม</li>
+      </ul>
+
+      <h2>ทักษะเพิ่มเติม</h2>
+      <ul>
+        <li>Microsoft Office Excel</li>
+        <li>จัดทำ Recipe มาตรฐาน และคำนวณต้นทุน</li>
+        <li>
+          ภาษา
+          <div class="language-bars">
+            <div>ภาษาไทย</div>
+            <div class="bar"><div class="level level-5"></div></div>
+            <div>ภาษาอังกฤษ</div>
+            <div class="bar"><div class="level level-3"></div></div>
+          </div>
+        </li>
+      </ul>
+
+      <h2>งานอดิเรก</h2>
+      <ul>
+        <li>ทดลองสูตรอาหารใหม่</li>
+        <li>อ่านหนังสือเกี่ยวกับวัตถุดิบและเทคนิคการทำอาหาร</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Lightbox สำหรับดูภาพขยาย -->
+  <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+    <img id="lightbox-img" src="">
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
