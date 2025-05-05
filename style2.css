@@ -139,7 +139,7 @@ body {
   margin-top: 16px;
 }
 
-/* Responsive สำหรับมือถือ
+/* Responsive สำหรับมือถือ */
 @media screen and (max-width: 768px) {
   .container {
     flex-direction: column;
@@ -149,4 +149,4 @@ body {
   .profile-left, .resume-content {
     width: 100%;
   }
-} */
+}
