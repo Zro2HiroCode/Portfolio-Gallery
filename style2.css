@@ -1,3 +1,4 @@
+
 body {
   font-family: sans-serif;
   margin: 0;
@@ -118,3 +119,167 @@ a {
 a:hover {
   text-decoration: underline;
 }
+
+:root {
+  --bg-main: #e6e8ea;       /* พื้นหลังหลัก */
+  --box-bg: #d1d5db;        /* กล่องพื้นหลัง */
+  --highlight: #6b7280;     /* สีเน้น / header */
+  --text-main: #1f2937;     /* สีตัวหนังสือ */
+  --accent: #9ca3af;        /* สีขอบหรือเงา */
+  --green-bar: #a6bfa1;     /* สำหรับกราฟภาษา */
+}
+
+body {
+  font-family: sans-serif;
+  margin: 0;
+
+  background: #2c2f36; /* เทาเข้มที่อ่อนลงจากเดิม */
+  padding: 3px 5px;
+  display: flex;
+  justify-content: center;
+  color: #e8e8e8; /* เทาอ่อนเกือบขาว */
+  background: var(--bg-main);
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  color: var(--text-main);
+
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  max-width: 1000px;
+
+  margin: 40px auto;
+  gap: 15px;
+  align-items: flex-start;
+}
+
+.profile-left, .resume-content {
+  padding: 12px;
+  border-radius: 6px;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.25);
+  background: #3a3f48; /* เทากลางนุ่มๆ */
+  width: 100%;
+  gap: 20px;
+  align-items: flex-start;
+  margin: 0 auto;
+  padding: 10px;
+  flex-wrap: wrap;
+}
+
+.profile-left, .resume-content {
+  padding: 10px;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  background: var(--box-bg);
+  flex: 1 1 100%;
+}
+
+@media (min-width: 768px) {
+  .profile-left {
+    width: 30%;
+  }
+
+  .resume-content {
+    width: 70%;
+  }
+
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .profile-left, .resume-content {
+    width: 100%;
+  }
+
+}
+
+.profile-left {
+  width: 30%;
+}
+
+.resume-content {
+  width: 70%;
+}
+
+.profile-img, .sample-img {
+  width: 100%;
+  border-radius: 6px;
+  cursor: pointer;
+  border: 2px solid #586270;
+}
+
+.sample-img {
+  width: 100%;
+  margin-top: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  border: 1px solid #586270;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+
+}
+
+.section {
+  margin-top: 16px;
+}
+
+.label {
+  font-weight: bold;
+  color: #e8e8e8; /* ฟ้าอ่อนนุ่ม */
+}
+
+.language-bars {
+  margin-left: 1em;
+  width: 80%;
+}
+
+.bar {
+  background-color: #555a65;
+  border-radius: 6px;
+  margin: 4px 0 12px 0;
+  height: 10px;
+  width: 100%;
+}
+
+.level {
+  height: 100%;
+  background-color: #90caf9; /* ฟ้าอ่อนกว่าเดิม */
+  border-radius: 6px;
+  background-color: var(--green-bar);
+  border-radius: 10px;
+
+}
+
+.level-5 { width: 100%; }
+.level-4 { width: 80%; }
+.level-3 { width: 60%; }
+.level-2 { width: 40%; }
+.level-1 { width: 20%; }
+
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 99;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.75);
+  justify-content: center;
+  align-items: center;
+}
+
+.lightbox img {
+  max-width: 90%;
+  max-height: 90%;
+  border: 2px solid #90caf9;
+  border-radius: 4px;
+}
+
+
