@@ -1,16 +1,35 @@
+:root {
+  --bg-main: #e6e8ea;       /* พื้นหลังหลัก */
+  --box-bg: #d1d5db;        /* กล่องพื้นหลัง */
+  --highlight: #6b7280;     /* สีเน้น / header */
+  --text-main: #1f2937;     /* สีตัวหนังสือ */
+  --accent: #9ca3af;        /* สีขอบหรือเงา */
+  --green-bar: #a6bfa1;     /* สำหรับกราฟภาษา */
+}
+
 body {
   font-family: sans-serif;
   margin: 0;
+<<<<<<< HEAD
   background: #2c2f36; /* เทาเข้มที่อ่อนลงจากเดิม */
   padding: 3px 5px;
   display: flex;
   justify-content: center;
   color: #e8e8e8; /* เทาอ่อนเกือบขาว */
+=======
+  background: var(--bg-main);
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  color: var(--text-main);
+>>>>>>> c5c8ed8ef3b99310a952aa7ca567d3bd583e6d60
 }
 
 .container {
   display: flex;
+  flex-direction: row;
   max-width: 1000px;
+<<<<<<< HEAD
   margin: 40px auto;
   gap: 15px;
   align-items: flex-start;
@@ -21,6 +40,44 @@ body {
   border-radius: 6px;
   box-shadow: 0 1px 6px rgba(0,0,0,0.25);
   background: #3a3f48; /* เทากลางนุ่มๆ */
+=======
+  width: 100%;
+  gap: 20px;
+  align-items: flex-start;
+  margin: 0 auto;
+  padding: 10px;
+  flex-wrap: wrap;
+}
+
+.profile-left, .resume-content {
+  padding: 10px;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  background: var(--box-bg);
+  flex: 1 1 100%;
+}
+
+@media (min-width: 768px) {
+  .profile-left {
+    width: 30%;
+  }
+
+  .resume-content {
+    width: 70%;
+  }
+
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .profile-left, .resume-content {
+    width: 100%;
+  }
+>>>>>>> c5c8ed8ef3b99310a952aa7ca567d3bd583e6d60
 }
 
 .profile-left {
@@ -31,8 +88,9 @@ body {
   width: 70%;
 }
 
-.profile-img {
+.profile-img, .sample-img {
   width: 100%;
+<<<<<<< HEAD
   border-radius: 6px;
   cursor: pointer;
   border: 2px solid #586270;
@@ -44,6 +102,11 @@ body {
   border-radius: 5px;
   cursor: pointer;
   border: 1px solid #586270;
+=======
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+>>>>>>> c5c8ed8ef3b99310a952aa7ca567d3bd583e6d60
 }
 
 .section {
@@ -70,8 +133,13 @@ body {
 
 .level {
   height: 100%;
+<<<<<<< HEAD
   background-color: #90caf9; /* ฟ้าอ่อนกว่าเดิม */
   border-radius: 6px;
+=======
+  background-color: var(--green-bar);
+  border-radius: 10px;
+>>>>>>> c5c8ed8ef3b99310a952aa7ca567d3bd583e6d60
 }
 
 .level-5 { width: 100%; }
@@ -94,15 +162,24 @@ body {
 .lightbox img {
   max-width: 90%;
   max-height: 90%;
+<<<<<<< HEAD
   border: 2px solid #90caf9;
   border-radius: 4px;
 }
 
+=======
+  border: 3px solid var(--green-bar);
+  border-radius: 4px;
+}
+
+/* Box Styles */
+>>>>>>> c5c8ed8ef3b99310a952aa7ca567d3bd583e6d60
 .profile-header,
 .address-box,
 .portfolio-box,
 .edu-box,
 .exp-box {
+<<<<<<< HEAD
   background-color: #434953; /* เทาอมฟ้าสว่างขึ้น */
   padding: 12px;
   border-radius: 6px;
@@ -117,4 +194,23 @@ a {
 
 a:hover {
   text-decoration: underline;
+=======
+  background-color: var(--green-bar);
+  padding: 10px;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  margin-top: 16px;
+}
+
+/* Responsive สำหรับมือถือ */
+@media screen and (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .profile-left, .resume-content {
+    width: 100%;
+  }
+>>>>>>> c5c8ed8ef3b99310a952aa7ca567d3bd583e6d60
 }
