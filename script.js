@@ -1,11 +1,10 @@
-  function openImage(src) {
-    const modal = document.getElementById("imageModal");
-    const modalImg = document.getElementById("modalImg");
-    modal.style.display = "block";
-    modalImg.src = src;
-  }
+function openLightbox(src) {
+  const lightbox = document.getElementById("lightbox");
+  const lightboxImg = document.getElementById("lightbox-img");
+  lightboxImg.src = src;
+  lightbox.style.display = "flex";
+}
 
-  function closeImage() {
-    document.getElementById("imageModal").style.display = "none";
-  }
-
+function closeLightbox() {
+  document.getElementById("lightbox").style.display = "none";
+}
