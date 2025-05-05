@@ -132,14 +132,14 @@ body {
 .portfolio-box,
 .edu-box,
 .exp-box {
-  background-color: #a6bfa1;
+  background-color: var(--green-bar);
   padding: 10px;
   border-radius: 6px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
   margin-top: 16px;
 }
 
-/* Responsive สำหรับมือถือ */
+/* Responsive สำหรับมือถือ
 @media screen and (max-width: 768px) {
   .container {
     flex-direction: column;
@@ -149,4 +149,4 @@ body {
   .profile-left, .resume-content {
     width: 100%;
   }
-}
+} */
