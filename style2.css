@@ -1,7 +1,16 @@
+:root {
+  --bg-main: #e6e8ea;       /* พื้นหลังหลัก */
+  --box-bg: #d1d5db;        /* กล่องพื้นหลัง */
+  --highlight: #6b7280;     /* สีเน้น / header */
+  --text-main: #1f2937;     /* สีตัวหนังสือ */
+  --accent: #9ca3af;        /* สีขอบหรือเงา */
+  --green-bar: #a6bfa1;     /* สำหรับกราฟภาษา */
+}
+
 body {
   font-family: sans-serif;
   margin: 0;
-  background: #e3e8e1;
+  background: var(--bg-main);
   padding: 20px;
   display: flex;
   justify-content: center;
