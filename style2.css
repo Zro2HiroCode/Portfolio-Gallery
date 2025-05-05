@@ -37,6 +37,28 @@ body {
   flex: 1 1 100%;
 }
 
+@media (min-width: 768px) {
+  .profile-left {
+    width: 30%;
+  }
+
+  .resume-content {
+    width: 70%;
+  }
+
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .profile-left, .resume-content {
+    width: 100%;
+  }
+}
+
 .profile-left {
   width: 30%;
 }
@@ -75,7 +97,7 @@ body {
 
 .level {
   height: 100%;
-  background-color: #a6bfa1;
+  background-color: var(--green-bar);
   border-radius: 10px;
 }
 
