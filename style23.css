@@ -1,20 +1,63 @@
-:root {
-    --bg-main: #e6e8ea;       /* พื้นหลังหลัก */
-    --box-bg: #d1d5db;        /* กล่องพื้นหลัง */
-    --highlight: #6b7280;     /* สีเน้น / header */
-    --text-main: #1f2937;     /* สีตัวหนังสือ */
-    --accent: #9ca3af;        /* สีขอบหรือเงา */
-    --green-bar: #a6bfa1;     /* สำหรับกราฟภาษา */
+
+body {
+  font-family: sans-serif;
+  margin: 0;
+  background: var(--bg-main);
+  padding: 3px 5px;
+  display: flex;
+  justify-content: center;
+  color: var(--text-main);
+}
+
+.container {
+  display: flex;
+  max-width: 1000px;
+  margin: 40px auto;
+  gap: 20px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.profile-left, .resume-content {
+  padding: 12px;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  background: var(--box-bg);
+  flex: 1 1 100%;
+}
+
+@media (min-width: 768px) {
+  .profile-left {
+    width: 30%;
   }
-  
-  body {
+
+  .resume-content {
+    width: 70%;
+  }
+}
+
+.profile-header,
+.address-box, .portfolio-box,
+.edu-box, .exp-box {
+  background-color: var(--highlight);
+  color: white;
+  padding: 16px;
+  border-radius: 6px;
+  margin-top: 16px;
+}
+
+.level {
+  background-color: var(--green-bar);
+}
+
+
+body {
     font-family: sans-serif;
     margin: 0;
-    background: var(--bg-main);
+    background: #e3e8e1;
     padding: 20px;
     display: flex;
     justify-content: center;
-    color: var(--text-main);
   }
   
   .container {
@@ -26,36 +69,21 @@
     align-items: flex-start;
     margin: 0 auto;
     padding: 10px;
-    flex-wrap: wrap;
   }
   
   .profile-left, .resume-content {
     padding: 10px;
     border-radius: 6px;
     box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    background: var(--box-bg);
-    flex: 1 1 100%;
+    background: #c9cec9;
   }
   
-  @media (min-width: 768px) {
-    .profile-left {
-      width: 30%;
-    }
-  
-    .resume-content {
-      width: 70%;
-    }
+  .profile-left {
+    width: 30%;
   }
   
-  @media screen and (max-width: 768px) {
-    .container {
-      flex-direction: column;
-      padding: 10px;
-    }
-  
-    .profile-left, .resume-content {
-      width: 100%;
-    }
+  .resume-content {
+    width: 70%;
   }
   
   .profile-img, .sample-img {
@@ -88,7 +116,7 @@
   
   .level {
     height: 100%;
-    background-color: var(--green-bar);
+    background-color: #a6bfa1;
     border-radius: 10px;
   }
   
@@ -113,7 +141,7 @@
   .lightbox img {
     max-width: 90%;
     max-height: 90%;
-    border: 3px solid var(--green-bar);
+    border: 3px solid #a6bfa1;
     border-radius: 4px;
   }
   
@@ -123,10 +151,22 @@
   .portfolio-box,
   .edu-box,
   .exp-box {
-    background-color: var(--green-bar);
+    background-color: #a6bfa1;
     padding: 10px;
     border-radius: 6px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
     margin-top: 16px;
+  }
+  
+  /* Responsive สำหรับมือถือ */
+  @media screen and (max-width: 768px) {
+    .container {
+      flex-direction: column;
+      padding: 10px;
+    }
+  
+    .profile-left, .resume-content {
+      width: 100%;
+    }
   }
   
