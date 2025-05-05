@@ -107,3 +107,43 @@ body {
 .modal:hover {
   cursor: zoom-out;
 }
+
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 2rem;
+  padding: 20px;
+}
+
+/* ซ้าย */
+.profile-left {
+  width: 30%;
+  min-width: 250px;
+}
+
+/* ขวา */
+.resume-content {
+  width: 65%;
+}
+
+.profile-img,
+.sample-img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.2);
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .profile-left,
+  .resume-content {
+    width: 100%;
+  }
+}
