@@ -34,12 +34,6 @@ nav ul li a {
   text-decoration: none;
 }
 
-nav a {
-  color: #00ff99;
-  text-decoration: none;
-  font-weight: bold;
-}
-
 nav a:hover {
   color: #ecd22a;
   transform: scale(1.05);
@@ -129,19 +123,18 @@ footer {
   }
 }
 
-.toc a {
+a {
   color: white;
   text-decoration: none;
   font-weight: bold;
-  display: inline-block; /* เพื่อให้ scale ได้อย่างราบรื่น */
+  display: inline-block;
   transform: scale(1);
+  transition: color 0.2s ease, transform 0.2s ease;
 }
 
-.toc a:hover {
+a:hover {
   color: #ffcc00;
-  text-decoration: none;
   transform: scale(1.1);
-  transition: transform 0.2s ease, color 0.2s ease;
 }
 
 .toc li {
