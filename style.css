@@ -143,3 +143,8 @@ footer {
 .toc li {
   margin-bottom: 0.5rem;
 }
+
+.toc a:visited {
+  color: white;
+  text-decoration: none;
+}
