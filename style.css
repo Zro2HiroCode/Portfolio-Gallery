@@ -41,7 +41,8 @@ nav a {
 }
 
 nav a:hover {
-  color: #777465;
+  color: #ecd22a;
+  transform: scale(1.05);
 }
 
 section {
