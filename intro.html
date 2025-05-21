@@ -9,32 +9,40 @@
 <body>
   <header>
     <h1>คำนำ</h1>
-    <nav>
-      <ul>
-        <li><a href="intro.html">คำนำ</a></li>
-          <li><a href="about.html">ประวัติ</a></li>
-          <li><a href="skills.html">ทักษะ</a></li>
-          <li><a href="gallery.html">ผลงาน</a></li>
-          <li><a href="cv.html">หนังสือรับรองการทำงาน</a></li>
-          <li><a href="contact.html">ติดต่อ</a></li>
-      </ul>
-    </nav>
+    <nav class="navbar">
+  <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+  <ul class="nav-links" id="nav-links">
+    <li><a href="index.html">หน้าหลัก</a></li>
+    <li><a href="about.html">ประวัติ</a></li>
+    <li><a href="skills.html">ทักษะ</a></li>
+    <li><a href="gallery.html">ผลงาน</a></li>
+    <li><a href="contact.html">ติดต่อ</a></li>
+  </ul>
+</nav>
   </header>
 
   <section class="content-split">
     <div class="text">
       <h3>คำนำ</h3>
       <p>
-      พอร์ตโฟลิโอนี้จัดทำขึ้นเพื่อแสดงประสบการณ์ ทักษะ และผลงานของไชโย แสงใส 
-      ในฐานะ Chef de Partie ที่มีความหลงใหลในงานศิลปะด้านอาหารและการจัดสำรับอย่างสร้างสรรค์
-    <div class="back-link">
+    พอร์ตโฟลิโอนี้จัดทำขึ้นเพื่อรวบรวมและนำเสนอประสบการณ์ ความสามารถ และผลงานของ <strong>ไชโย แสงใส</strong> ผู้ที่มีความมุ่งมั่นในสายงานครัว และหลงใหลในศิลปะการปรุงอาหารอย่างแท้จริง ไม่ว่าจะเป็นการสร้างสรรค์เมนูใหม่ ๆ การจัดสำรับอาหารให้ดูงดงาม ไปจนถึงการบริหารจัดการวัตถุดิบและต้นทุนในครัวอย่างมีประสิทธิภาพ
+  </p>
+  <p>
+    ตลอดระยะเวลาการทำงานที่ผ่านมา ผู้จัดทำได้สั่งสมประสบการณ์จากทั้งงานร้านอาหาร โรงแรม และงานบริการอาหารในโอกาสต่าง ๆ ซึ่งล้วนเป็นเวทีให้ได้เรียนรู้ ฝึกฝน และพัฒนาทักษะทั้งในเชิงเทคนิคและความคิดสร้างสรรค์อย่างต่อเนื่อง โดยเฉพาะความละเอียดอ่อนในการเลือกวัตถุดิบ การจัดองค์ประกอบจาน และการควบคุมคุณภาพอาหารทุกจานที่ออกจากครัว
+  </p>
+  <p>
+    พอร์ตโฟลิโอนี้จึงไม่เพียงแต่เป็นการนำเสนอผลงานในอดีต แต่ยังเป็นภาพสะท้อนของตัวตนและแนวทางการทำงานของผู้จัดทำ เพื่อใช้เป็นข้อมูลประกอบการสมัครงานในอนาคต รวมถึงเป็นบันทึกพัฒนาการและความสำเร็จในเส้นทางสายอาชีพที่เลือกเดินอย่างภาคภูมิใจ
+  </p>
+
+
+          <div class="back-link">
       <p><a href="index.html">← กลับสู่สารบัญ</a></p>
     </div>
     </div>
       
     <div class="photo">
-      <img src="images/ลูบหน้าผาก.png" alt="ภาพประวัติส่วนตัว" />
-    <img src="images/คุ๊กกิ้ง.png" alt="ภาพประวัติส่วนตัว" />
+    <img src="images/ภาพส่วนบุคคล/คุ๊กกิ้ง.png" alt="ภาพประวัติส่วนตัว" />
+    <img src="images/ภาพส่วนบุคคล/ถือจานไส้กรอก.png" alt="ภาพประวัติส่วนตัว" />
    </div>
 
     
@@ -44,5 +52,16 @@
 <footer>
   <p>&copy; 2025 ไชโย แสงใส</p>
 </footer>
+
+<script>
+  const menuToggle = document.getElementById('menu-toggle');
+  const navLinks = document.getElementById('nav-links');
+
+  menuToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+  });
+</script>
+
+
 </body>
 </html>

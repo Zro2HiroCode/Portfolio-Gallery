@@ -39,6 +39,66 @@ nav a:hover {
   transform: scale(1.05);
 }
 
+
+/* HAMBURGER MENU STYLES */
+.navbar {
+  position: relative;
+  background-color: #1f1f1f;
+  padding: 1rem;
+}
+
+.menu-toggle {
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+  display: none;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  padding: 0;
+  margin: 0;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.2s;
+}
+
+.nav-links li a:hover {
+  color: #ffcc00;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: #1f1f1f;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    padding: 1rem 0;
+    text-align: center;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+}
+
+
 section {
   background-color: #222;
   padding: 2rem;
@@ -89,6 +149,25 @@ footer {
 .content-split .text {
   flex: 1;
   min-width: 280px;
+  background-color: #1d1d1d;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  color: #f0f0f0;
+  line-height: 1.8;
+  font-size: 1.05rem;
+  text-align: justify;
+}
+
+.content-split .text h3 {
+  margin-top: 0;
+  color: #ffcc00;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.content-split .text strong {
+  color: #ffcc00;
 }
 
 .content-split .photo {
