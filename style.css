@@ -12,6 +12,7 @@ header {
   padding: 1rem;
   text-align: center;
   border: 3px solid #1f2c17;
+  position: relative; /* ✅ เพิ่มบรรทัดนี้ */
 }
 
 header h1 {
@@ -47,12 +48,12 @@ nav a:hover {
   padding: 1rem;
 }
 
-.menu-toggle {
+/* .menu-toggle {
   font-size: 2rem;
   color: white;
   cursor: pointer;
   display: none;
-}
+} */
 
 .nav-links {
   list-style: none;
@@ -76,17 +77,29 @@ nav a:hover {
 }
 
 /* Responsive */
-@media (max-width: 768px) {
-  .menu-toggle {
+header {
+  background-color: #131311;
+  padding: 1rem;
+  text-align: center;
+  border: 3px solid #1f2c17;
+  position: relative; /* ✅ ต้องมี */
+}
+
+.menu-toggle {
   position: absolute;
   top: 1rem;
   right: 1rem;
-  z-index: 1000;
   font-size: 2rem;
   color: white;
   cursor: pointer;
-  display: block;
+  display: none; /* จะแสดงเฉพาะบนหน้าจอแคบ */
 }
+
+/* Responsive: แสดงปุ่ม ☰ บนจอแคบ */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
 
   .nav-links {
     display: none;
