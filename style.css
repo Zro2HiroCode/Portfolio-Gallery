@@ -104,13 +104,17 @@ header {
   .nav-links {
     display: none;
     flex-direction: column;
-    background-color: #1f1f1f;
+    background-color: rgba(31, 31, 31, 0.8); /* สีพื้นหลังโปร่งแสง */
     position: absolute;
     top: 60px;
     left: 0;
     width: 100%;
-    padding: 1rem 0;
-    text-align: center;
+    padding: 1rem 0; /* padding รอบด้าน */
+    text-align: right;
+    backdrop-filter: blur(4px); /* เพิ่มความฟุ้งเบา ๆ แบบ glass effect */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* ขอบล่างบาง ๆ */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* เงานิดหน่อย */
+    border-radius: 0 0 12px 12px; /* มุมล่างโค้งเล็กน้อย */
   }
 
   .nav-links.active {

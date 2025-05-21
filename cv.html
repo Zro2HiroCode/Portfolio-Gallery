@@ -65,16 +65,18 @@
 <body>
   <header>
     <h1>ผลงาน</h1>
-    <nav>
-      <ul>
-        <li><a href="intro.html">คำนำ</a></li>
+    <div class="menu-toggle" id="menu-toggle">☰</div> <!-- ✅ เหลือตัวเดียว พร้อม id -->
+    <nav class="navbar">
+  <ul class="nav-links" id="nav-links">
+    <li><a href="index.html">หน้าหลัก</a></li>
+    <li><a href="intro.html">คำนำ</a></li>
           <li><a href="about.html">ประวัติ</a></li>
           <li><a href="skills.html">ทักษะ</a></li>
           <li><a href="gallery.html">ผลงาน</a></li>
           <li><a href="cv.html">หนังสือรับรองการทำงาน</a></li>
           <li><a href="contact.html">ติดต่อ</a></li>
-      </ul>
-    </nav>
+  </ul>
+</nav>
   </header>
 
   <section id="gallery">
@@ -114,6 +116,13 @@
     function closeLightbox() {
       document.getElementById("lightbox").style.display = "none";
     }
+
+    const menuToggle = document.getElementById('menu-toggle');
+  const navLinks = document.getElementById('nav-links');
+
+  menuToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+  });
   </script>
 </body>
 </html>
