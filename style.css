@@ -224,6 +224,11 @@ footer {
   margin-bottom: 0.5rem;
 }
 
+/* กำหนดสีเหลืองให้กับหัวข้อทุกระดับ */
+h1, h2, h3, h4, h5, h6 {
+  color: #ffcc00;
+}
+
 .toc a:visited {
   color: white;
   text-decoration: none;
