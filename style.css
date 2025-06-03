@@ -12,7 +12,7 @@ header {
   padding: 1rem;
   text-align: center;
   border: 3px solid #1f2c17;
-  position: relative; /* ✅ เพิ่มบรรทัดนี้ */
+  position: relative;
 }
 
 header h1 {
@@ -20,71 +20,40 @@ header h1 {
   margin: 0;
 }
 
-nav ul {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 1rem;
-  margin: 0;
-}
-
-nav ul li a {
-  color: white;
-  text-decoration: none;
-}
-
-nav a:hover {
-  color: #ecd22a;
-  transform: scale(1.1);
-}
-
-
-/* HAMBURGER MENU STYLES */
-.navbar {
-  position: relative;
-  background-color: #1f1f1f;
-  padding: 1rem;
-}
-
-/* .menu-toggle {
-  font-size: 2rem;
-  color: white;
-  cursor: pointer;
-  display: none;
-} */
-
+nav ul,
 .nav-links {
   list-style: none;
-  display: flex;
-  gap: 1rem;
   padding: 0;
-  margin: 0;
+  display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  gap: 1rem;
+  margin: 0;
 }
 
-.nav-links li a {
+nav ul li a,
+.nav-links li a,
+a,
+.back-link a,
+.list-contents a {
   color: white;
   text-decoration: none;
   font-weight: bold;
-  transition: color 0.2s;
+  display: inline-block;
+  transform: scale(1);
+  transition: color 0.2s ease, transform 0.2s ease;
 }
 
-.nav-links li a:hover {
+nav a:hover,
+.nav-links li a:hover,
+a:hover,
+.back-link a:hover,
+.list-contents a:hover {
   color: #ffcc00;
+  transform: scale(1.1);
 }
 
-/* Responsive */
-header {
-  background-color: #131311;
-  padding: 1rem;
-  text-align: center;
-  border: 3px solid #1f2c17;
-  position: relative; /* ✅ ต้องมี */
-}
-
+/* Hamburger menu toggle button */
 .menu-toggle {
   position: absolute;
   top: 1rem;
@@ -92,10 +61,10 @@ header {
   font-size: 2rem;
   color: white;
   cursor: pointer;
-  display: none; /* จะแสดงเฉพาะบนหน้าจอแคบ */
+  display: none;
 }
 
-/* Responsive: แสดงปุ่ม ☰ บนจอแคบ */
+/* Responsive menu */
 @media (max-width: 768px) {
   .menu-toggle {
     display: block;
@@ -104,25 +73,24 @@ header {
   .nav-links {
     display: none;
     flex-direction: column;
-    background-color: rgba(31, 31, 31, 0.8); /* สีพื้นหลังโปร่งแสง */
+    background-color: rgba(31, 31, 31, 0.8);
     position: absolute;
     top: 60px;
     left: 0;
     width: 100%;
-    padding: 1rem 0; /* padding รอบด้าน */
+    padding: 1rem 0;
     text-align: right;
-    backdrop-filter: blur(4px); /* เพิ่มความฟุ้งเบา ๆ แบบ glass effect */
-    z-index: 1000; /* ให้อยู่บนสุด */
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* ขอบล่างบาง ๆ */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* เงานิดหน่อย */
-    border-radius: 0 0 12px 12px; /* มุมล่างโค้งเล็กน้อย */
+    backdrop-filter: blur(4px);
+    z-index: 1000;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 0 0 12px 12px;
   }
 
   .nav-links.active {
     display: flex;
   }
 }
-
 
 section {
   background-color: #222;
@@ -145,7 +113,7 @@ section {
   aspect-ratio: 1 / 0.7;
   object-fit: cover;
   border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
   cursor: pointer;
   transition: transform 0.15s ease;
 }
@@ -168,7 +136,7 @@ footer {
   align-items: flex-start;
   gap: 2rem;
   margin-top: 2rem;
-  flex-wrap: wrap; /* ทำให้ responsive บนหน้าจอแคบ */
+  flex-wrap: wrap;
 }
 
 .content-split .text {
@@ -177,7 +145,7 @@ footer {
   background-color: #1d1d1d;
   padding: 2rem;
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
   color: #f0f0f0;
   line-height: 1.8;
   font-size: 1.05rem;
@@ -187,7 +155,7 @@ footer {
 .content-split .text h3 {
   margin-top: 0;
   color: #ffcc00;
-  font-size: 1rem;
+  font-size: 1.2rem;
   margin-bottom: 1rem;
 }
 
@@ -196,24 +164,28 @@ footer {
 }
 
 .content-split .photo {
-  flex: 1;
-  text-align: center;
-  min-width: 280px;
+  width: 300px;
+  padding: 1rem;
+  border: 4px solid #ffcc00;
+  background-color: #000;
+  border-radius: 8px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
 }
 
 .content-split .photo img {
   width: 100%;
-  max-width: 400px;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(255, 204, 0, 0.5);
 }
 
 .line-contact {
-  /* padding: 1rem; */
   border-radius: 12px;
   text-align: left;
   margin-top: 0.5rem;
-  /* box-shadow: 0 2px 6px rgba(0,0,0,0.2); */
 }
 
 .line-label {
@@ -227,11 +199,10 @@ footer {
   width: 80px;
   max-width: 100%;
   border-radius: 2px;
-  box-shadow: 0 0 5px rgba(0,0,0,0.3);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
 }
 
-
-
+/* Responsive gallery & layout */
 @media (max-width: 768px) {
   .gallery {
     grid-template-columns: repeat(2, 1fr);
@@ -249,20 +220,6 @@ footer {
   }
 }
 
-a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-  display: inline-block;
-  transform: scale(1);
-  transition: color 0.2s ease, transform 0.2s ease;
-}
-
-a:hover {
-  color: #ffcc00;
-  transform: scale(1.1);
-}
-
 .toc li {
   margin-bottom: 0.5rem;
 }
@@ -271,85 +228,3 @@ a:hover {
   color: white;
   text-decoration: none;
 }
-
-
-.back-link a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-  display: inline-block;
-  transform: scale(1);
-  transition: color 0.2s ease, transform 0.2s ease;
-}
-
-.back-link a:hover {
-  color: #ffcc00;
-  transform: scale(1.1);
-}
-
-
-.list-contents a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-  display: inline-block;
-  transform: scale(1);
-  transition: color 0.2s ease, transform 0.2s ease;
-}
-
-.list-contents a:hover {
-  color: #ffcc00;
-  transform: scale(1.1);
-}
-
-.content-split {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      gap: 2rem;
-      margin-top: 2rem;
-      flex-wrap: wrap;
-    }
-
-    .text {
-      flex: 1;
-      min-width: 280px;
-      background-color: #1d1d1d;
-      padding: 2rem;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-      color: #f0f0f0;
-      line-height: 1.8;
-      font-size: 1.05rem;
-      text-align: justify;
-    }
-
-    .text h3 {
-      margin-top: 0;
-      color: #ffcc00;
-      font-size: 1.2rem;
-      margin-bottom: 1rem;
-    }
-
-    .text strong {
-      color: #ffcc00;
-    }
-
-    .photo {
-      width: 300px;               /* กว้าง 300px ตามที่ขอ */
-      padding: 1rem;
-      border: 4px solid #ffcc00; /* กรอบสีเหลือง */
-      background-color: #000;    /* พื้นหลังดำ */
-      border-radius: 8px;
-      box-sizing: border-box;
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-      align-items: center;
-    }
-
-    .photo img {
-      width: 100%;
-      border-radius: 8px;
-      box-shadow: 0 4px 12px rgba(255, 204, 0, 0.5);
-    }
