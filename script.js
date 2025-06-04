@@ -21,7 +21,7 @@ const menuToggle = document.getElementById('menu-toggle');
   function filterImages(category) {
   const images = document.querySelectorAll(".gallery img");
   images.forEach(img => {
-    img.style.display = (category === 'all' || img.dataset.category === category)
+    img.style.display = (category === 'ทั้งหมด' || img.dataset.category === category)
       ? "inline-block"
       : "none";
   });
