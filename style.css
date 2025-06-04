@@ -122,6 +122,8 @@ section {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
   cursor: pointer;
   transition: transform 0.15s ease;
+  padding: 4px;
+  background-color: #111;
 }
 
 .gallery img:hover {
