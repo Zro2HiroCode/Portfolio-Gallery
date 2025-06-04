@@ -17,3 +17,12 @@ const menuToggle = document.getElementById('menu-toggle');
   menuToggle.addEventListener('click', () => {
     navLinks.classList.toggle('active');
   });
+
+  function filterImages(category) {
+  const images = document.querySelectorAll(".gallery img");
+  images.forEach(img => {
+    img.style.display = (category === 'all' || img.dataset.category === category)
+      ? "inline-block"
+      : "none";
+  });
+}

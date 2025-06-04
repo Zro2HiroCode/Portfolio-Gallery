@@ -24,38 +24,40 @@
 </nav>
   </header>
 
-  <section id="gallery">
-    <h3>ผลงาน</h3>
-    <div class="gallery">
-      <div class="photo">
-      <img src="images/อาหาร/ทานเล่น/ทานเล่น (1).png" alt="สำรับตัวอย่าง 1" loading="lazy" onclick="openLightbox(this.src)" />
-      <img src="images/อาหาร/ทานเล่น/ทานเล่น (2).png" alt="สำรับตัวอย่าง 1" loading="lazy" onclick="openLightbox(this.src)" />
+  <div class="category-buttons">
+  <button onclick="filterImages('all')">ทั้งหมด</button>
+  <button onclick="filterImages('ทานเล่น')">ทานเล่น</button>
+  <button onclick="filterImages('สลัด')">สลัด</button>
+  <button onclick="filterImages('ซุป')">ซุป</button>
+  <button onclick="filterImages('พาสต้า')">พาสต้า</button>
+  <button onclick="filterImages('กริลล์')">กริลล์</button>
+</div>
 
-      <img src="images/อาหาร/สลัด/สลัด (1).png" alt="สำรับตัวอย่าง 1" loading="lazy" onclick="openLightbox(this.src)" />
-      <img src="images/อาหาร/สลัด/สลัด (2).png" alt="สำรับตัวอย่าง 1" loading="lazy" onclick="openLightbox(this.src)" />
-
-      <img src="images/อาหาร/ซุป/ซุป (1).png" alt="สำรับตัวอย่าง 1" loading="lazy" onclick="openLightbox(this.src)" />
-
-      <img src="images/อาหาร/พาสต้า/พาสต้า (1).png" alt="สำรับตัวอย่าง 1" loading="lazy" onclick="openLightbox(this.src)" />
-      <img src="images/อาหาร/พาสต้า/พาสต้า (2).png" alt="สำรับตัวอย่าง 1" loading="lazy" onclick="openLightbox(this.src)" />
-      <img src="images/อาหาร/พาสต้า/พาสต้า (3).png" alt="สำรับตัวอย่าง 1" loading="lazy" onclick="openLightbox(this.src)" />
-      <img src="images/อาหาร/พาสต้า/พาสต้า (4).png" alt="สำรับตัวอย่าง 1" loading="lazy" onclick="openLightbox(this.src)" />
-      <img src="images/อาหาร/พาสต้า/พาสต้า (5).png" alt="สำรับตัวอย่าง 1" loading="lazy" onclick="openLightbox(this.src)" />
-      <img src="images/อาหาร/พาสต้า/พาสต้า (6).png" alt="สำรับตัวอย่าง 1" loading="lazy" onclick="openLightbox(this.src)" />
-      <img src="images/อาหาร/พาสต้า/พาสต้า (7).png" alt="สำรับตัวอย่าง 1" loading="lazy" onclick="openLightbox(this.src)" />
-      <img src="images/อาหาร/พาสต้า/พาสต้า (8).png" alt="สำรับตัวอย่าง 1" loading="lazy" onclick="openLightbox(this.src)" />
-
-      <img src="images/อาหาร/กริลล์/กริลล์ (1).webp" alt="สำรับตัวอย่าง 1" loading="lazy" onclick="openLightbox(this.src)" />
-      <img src="images/อาหาร/กริลล์/กริลล์ (3).jpg" alt="สำรับตัวอย่าง 1" loading="lazy" onclick="openLightbox(this.src)" />
-      <img src="images/อาหาร/กริลล์/กริลล์ (4).jpg" alt="สำรับตัวอย่าง 1" loading="lazy" onclick="openLightbox(this.src)" />
-      <img src="images/อาหาร/กริลล์/กริลล์ (5).jpg" alt="สำรับตัวอย่าง 1" loading="lazy" onclick="openLightbox(this.src)" />
-      <img src="images/อาหาร/กริลล์/กริลล์ (1).png" alt="สำรับตัวอย่าง 1" loading="lazy" onclick="openLightbox(this.src)" />
-      <img src="images/อาหาร/กริลล์/กริลล์ (2).png" alt="สำรับตัวอย่าง 1" loading="lazy" onclick="openLightbox(this.src)" />
-      <img src="images/อาหาร/กริลล์/กริลล์ (3).png" alt="สำรับตัวอย่าง 1" loading="lazy" onclick="openLightbox(this.src)" />
-      <img src="images/อาหาร/กริลล์/กริลล์ (4).png" alt="สำรับตัวอย่าง 1" loading="lazy" onclick="openLightbox(this.src)" />
-      
-      </div>
-    </div>
+<div class="gallery">
+  <div class="photo">
+  <img src="images/อาหาร/ทานเล่น/ทานเล่น (1).png" data-category="ทานเล่น" onclick="openLightbox(this.src)"  />
+  <img src="images/อาหาร/ทานเล่น/ทานเล่น (2).png" data-category="ทานเล่น" onclick="openLightbox(this.src)" />
+  <img src="images/อาหาร/สลัด/สลัด (1).png" data-category="สลัด" onclick="openLightbox(this.src)" />
+  <img src="images/อาหาร/สลัด/สลัด (2).png" data-category="สลัด" onclick="openLightbox(this.src)" />
+  <img src="images/อาหาร/ซุป/ซุป (1).png" data-category="ซุป" onclick="openLightbox(this.src)" />
+  <img src="images/อาหาร/พาสต้า/พาสต้า (1).png" data-category="พาสต้า" onclick="openLightbox(this.src)" />
+  <img src="images/อาหาร/พาสต้า/พาสต้า (2).png" data-category="พาสต้า" onclick="openLightbox(this.src)" />
+  <img src="images/อาหาร/พาสต้า/พาสต้า (3).png" data-category="พาสต้า" onclick="openLightbox(this.src)" />
+  <img src="images/อาหาร/พาสต้า/พาสต้า (4).png" data-category="พาสต้า" onclick="openLightbox(this.src)" />
+  <img src="images/อาหาร/พาสต้า/พาสต้า (5).png" data-category="พาสต้า" onclick="openLightbox(this.src)" />
+  <img src="images/อาหาร/พาสต้า/พาสต้า (6).png" data-category="พาสต้า" onclick="openLightbox(this.src)" />
+  <img src="images/อาหาร/พาสต้า/พาสต้า (7).png" data-category="พาสต้า" onclick="openLightbox(this.src)" />
+  <img src="images/อาหาร/พาสต้า/พาสต้า (8).png" data-category="พาสต้า" onclick="openLightbox(this.src)" />
+  <img src="images/อาหาร/กริลล์/กริลล์ (1).webp" data-category="กริลล์" onclick="openLightbox(this.src)" />
+  <img src="images/อาหาร/กริลล์/กริลล์ (3).jpg" data-category="กริลล์" onclick="openLightbox(this.src)" />
+  <img src="images/อาหาร/กริลล์/กริลล์ (4).jpg" data-category="กริลล์" onclick="openLightbox(this.src)" />
+  <img src="images/อาหาร/กริลล์/กริลล์ (5).jpg" data-category="กริลล์" onclick="openLightbox(this.src)" />
+  <img src="images/อาหาร/กริลล์/กริลล์ (1).png" data-category="กริลล์" onclick="openLightbox(this.src)" />
+  <img src="images/อาหาร/กริลล์/กริลล์ (2).png" data-category="กริลล์" onclick="openLightbox(this.src)" />
+  <img src="images/อาหาร/กริลล์/กริลล์ (3).png" data-category="กริลล์" onclick="openLightbox(this.src)" />
+  <img src="images/อาหาร/กริลล์/กริลล์ (4).png" data-category="กริลล์" onclick="openLightbox(this.src)" />
+  </div>
+</div>
 
     <div class="back-link">
       <p><a href="index.html">← กลับสู่หน้าหลัก</a></p>
