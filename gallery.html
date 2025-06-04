@@ -5,62 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>พอร์ตโฟลิโอ - ไชโย แสงใส</title>
   <link rel="stylesheet" href="style.css" />
-  <style>
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 1rem;
-      padding: 1rem;
-    }
-
-    .gallery img {
-      width: 100%;
-      height: auto;
-      border-radius: 8px;
-      cursor: pointer;
-      transition: transform 0.2s;
-    }
-
-    .gallery img:hover {
-      transform: scale(1.03);
-    }
-
-    #lightbox {
-      display: none;
-      position: fixed;
-      z-index: 999;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0, 0, 0, 0.8);
-      justify-content: center;
-      align-items: center;
-    }
-
-    #lightbox img {
-      max-width: 80%;
-      max-height: 80%;
-    }
-
-    .close {
-      position: absolute;
-      top: 20px;
-      right: 30px;
-      font-size: 40px;
-      color: white;
-      cursor: pointer;
-    }
-
-    .toc {
-      padding: 1rem;
-      text-align: center;
-    }
-
-    .toc a {
-      text-decoration: none;
-    }
-  </style>
+ 
 </head>
 <body>
   <header>
@@ -82,33 +27,34 @@
   <section id="gallery">
     <h3>ผลงาน</h3>
     <div class="gallery">
-      <img src="images/อาหาร/ทานเล่น/ทานเล่น (1).png" alt="สำรับตัวอย่าง 1" onclick="openLightbox(this.src)" />
-      <img src="images/อาหาร/ทานเล่น/ทานเล่น (2).png" alt="สำรับตัวอย่าง 1" onclick="openLightbox(this.src)" />
+      <div class="photo">
+      <img src="images/อาหาร/ทานเล่น/ทานเล่น (1).png" alt="สำรับตัวอย่าง 1" loading="lazy" onclick="openLightbox(this.src)" />
+      <img src="images/อาหาร/ทานเล่น/ทานเล่น (2).png" alt="สำรับตัวอย่าง 1" loading="lazy" onclick="openLightbox(this.src)" />
 
-      <img src="images/อาหาร/สลัด/สลัด (1).png" alt="สำรับตัวอย่าง 1" onclick="openLightbox(this.src)" />
-      <img src="images/อาหาร/สลัด/สลัด (2).png" alt="สำรับตัวอย่าง 1" onclick="openLightbox(this.src)" />
+      <img src="images/อาหาร/สลัด/สลัด (1).png" alt="สำรับตัวอย่าง 1" loading="lazy" onclick="openLightbox(this.src)" />
+      <img src="images/อาหาร/สลัด/สลัด (2).png" alt="สำรับตัวอย่าง 1" loading="lazy" onclick="openLightbox(this.src)" />
 
-      <img src="images/อาหาร/ซุป/ซุป (1).png" alt="สำรับตัวอย่าง 1" onclick="openLightbox(this.src)" />
+      <img src="images/อาหาร/ซุป/ซุป (1).png" alt="สำรับตัวอย่าง 1" loading="lazy" onclick="openLightbox(this.src)" />
 
-      <img src="images/อาหาร/พาสต้า/พาสต้า (1).png" alt="สำรับตัวอย่าง 1" onclick="openLightbox(this.src)" />
-      <img src="images/อาหาร/พาสต้า/พาสต้า (2).png" alt="สำรับตัวอย่าง 1" onclick="openLightbox(this.src)" />
-      <img src="images/อาหาร/พาสต้า/พาสต้า (3).png" alt="สำรับตัวอย่าง 1" onclick="openLightbox(this.src)" />
-      <img src="images/อาหาร/พาสต้า/พาสต้า (4).png" alt="สำรับตัวอย่าง 1" onclick="openLightbox(this.src)" />
-      <img src="images/อาหาร/พาสต้า/พาสต้า (5).png" alt="สำรับตัวอย่าง 1" onclick="openLightbox(this.src)" />
-      <img src="images/อาหาร/พาสต้า/พาสต้า (6).png" alt="สำรับตัวอย่าง 1" onclick="openLightbox(this.src)" />
-      <img src="images/อาหาร/พาสต้า/พาสต้า (7).png" alt="สำรับตัวอย่าง 1" onclick="openLightbox(this.src)" />
-      <img src="images/อาหาร/พาสต้า/พาสต้า (8).png" alt="สำรับตัวอย่าง 1" onclick="openLightbox(this.src)" />
+      <img src="images/อาหาร/พาสต้า/พาสต้า (1).png" alt="สำรับตัวอย่าง 1" loading="lazy" onclick="openLightbox(this.src)" />
+      <img src="images/อาหาร/พาสต้า/พาสต้า (2).png" alt="สำรับตัวอย่าง 1" loading="lazy" onclick="openLightbox(this.src)" />
+      <img src="images/อาหาร/พาสต้า/พาสต้า (3).png" alt="สำรับตัวอย่าง 1" loading="lazy" onclick="openLightbox(this.src)" />
+      <img src="images/อาหาร/พาสต้า/พาสต้า (4).png" alt="สำรับตัวอย่าง 1" loading="lazy" onclick="openLightbox(this.src)" />
+      <img src="images/อาหาร/พาสต้า/พาสต้า (5).png" alt="สำรับตัวอย่าง 1" loading="lazy" onclick="openLightbox(this.src)" />
+      <img src="images/อาหาร/พาสต้า/พาสต้า (6).png" alt="สำรับตัวอย่าง 1" loading="lazy" onclick="openLightbox(this.src)" />
+      <img src="images/อาหาร/พาสต้า/พาสต้า (7).png" alt="สำรับตัวอย่าง 1" loading="lazy" onclick="openLightbox(this.src)" />
+      <img src="images/อาหาร/พาสต้า/พาสต้า (8).png" alt="สำรับตัวอย่าง 1" loading="lazy" onclick="openLightbox(this.src)" />
 
-      <img src="images/อาหาร/กริลล์/กริลล์ (1).webp" alt="สำรับตัวอย่าง 1" onclick="openLightbox(this.src)" />
-      <img src="images/อาหาร/กริลล์/กริลล์ (3).jpg" alt="สำรับตัวอย่าง 1" onclick="openLightbox(this.src)" />
-      <img src="images/อาหาร/กริลล์/กริลล์ (4).jpg" alt="สำรับตัวอย่าง 1" onclick="openLightbox(this.src)" />
-      <img src="images/อาหาร/กริลล์/กริลล์ (5).jpg" alt="สำรับตัวอย่าง 1" onclick="openLightbox(this.src)" />
-      <img src="images/อาหาร/กริลล์/กริลล์ (1).png" alt="สำรับตัวอย่าง 1" onclick="openLightbox(this.src)" />
-      <img src="images/อาหาร/กริลล์/กริลล์ (2).png" alt="สำรับตัวอย่าง 1" onclick="openLightbox(this.src)" />
-      <img src="images/อาหาร/กริลล์/กริลล์ (3).png" alt="สำรับตัวอย่าง 1" onclick="openLightbox(this.src)" />
-      <img src="images/อาหาร/กริลล์/กริลล์ (4).png" alt="สำรับตัวอย่าง 1" onclick="openLightbox(this.src)" />
+      <img src="images/อาหาร/กริลล์/กริลล์ (1).webp" alt="สำรับตัวอย่าง 1" loading="lazy" onclick="openLightbox(this.src)" />
+      <img src="images/อาหาร/กริลล์/กริลล์ (3).jpg" alt="สำรับตัวอย่าง 1" loading="lazy" onclick="openLightbox(this.src)" />
+      <img src="images/อาหาร/กริลล์/กริลล์ (4).jpg" alt="สำรับตัวอย่าง 1" loading="lazy" onclick="openLightbox(this.src)" />
+      <img src="images/อาหาร/กริลล์/กริลล์ (5).jpg" alt="สำรับตัวอย่าง 1" loading="lazy" onclick="openLightbox(this.src)" />
+      <img src="images/อาหาร/กริลล์/กริลล์ (1).png" alt="สำรับตัวอย่าง 1" loading="lazy" onclick="openLightbox(this.src)" />
+      <img src="images/อาหาร/กริลล์/กริลล์ (2).png" alt="สำรับตัวอย่าง 1" loading="lazy" onclick="openLightbox(this.src)" />
+      <img src="images/อาหาร/กริลล์/กริลล์ (3).png" alt="สำรับตัวอย่าง 1" loading="lazy" onclick="openLightbox(this.src)" />
+      <img src="images/อาหาร/กริลล์/กริลล์ (4).png" alt="สำรับตัวอย่าง 1" loading="lazy" onclick="openLightbox(this.src)" />
       
-      
+      </div>
     </div>
 
     <div class="back-link">
@@ -117,11 +63,10 @@
   </section>
 
   <!-- Lightbox overlay -->
-  <div id="lightbox" onclick="closeLightbox()">
-    <span class="close">&times;</span>
-    <img id="lightbox-img" src="" alt="Zoom Image">
+  <div id="lightbox" onclick="closeLightbox(event)">
+  <span class="close">&times;</span>
+  <img id="lightbox-img" src="" alt="Zoom Image">
   </div>
-
   <footer>
     <p>&copy; 2025 ไชโย แสงใส</p>
   </footer>
