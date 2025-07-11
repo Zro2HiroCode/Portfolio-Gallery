@@ -3,57 +3,48 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>พอร์ตโฟลิโอ - ไชโย แสงใส</title>
+  <title>ประวัติการทำงาน - ไชโย แสงใส</title>
   <link rel="stylesheet" href="style.css" />
-  
 </head>
 <body>
   <header>
     <h1>ประวัติการทำงาน</h1>
-    <div class="menu-toggle" id="menu-toggle">☰</div> <!-- ✅ เหลือตัวเดียว พร้อม id -->
+    <div class="menu-toggle" id="menu-toggle">☰</div>
     <nav class="navbar">
-  <ul class="nav-links" id="nav-links">
-    <li><a href="index.html">หน้าหลัก</a></li>
-    <li><a href="intro.html">คำนำ</a></li>
-          <li><a href="about.html">ประวัติ</a></li>
-          <li><a href="skills.html">ทักษะ</a></li>
-          <li><a href="gallery.html">ผลงาน</a></li>
-          <li><a href="cv.html">ประวัติการทำงาน</a></li>
-          <li><a href="contact.html">ติดต่อ</a></li>
-  </ul>
-</nav>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">หน้าหลัก</a></li>
+        <li><a href="intro.html">คำนำ</a></li>
+        <li><a href="about.html">ประวัติ</a></li>
+        <li><a href="skills.html">ทักษะ</a></li>
+        <li><a href="gallery.html">ผลงาน</a></li>
+        <li><a href="cv.html">ประวัติการทำงาน</a></li>
+        <li><a href="contact.html">ติดต่อ</a></li>
+      </ul>
+    </nav>
   </header>
-
   <section id="gallery">
     <h3>ประวัติการทำงาน</h3>
     <div class="gallery">
       <div class="photo">
-      
-      <img src="images/ใบผ่านงาน/ปากน้ำกระบี่ซีฟู้ด.png" alt="สำรับตัวอย่าง 1" loading="lazy" onclick="openLightbox(this.src)" />
-      <img src="images/ใบผ่านงาน/ฟาร์มรักดี.png" alt="สำรับตัวอย่าง 2" loading="lazy" onclick="openLightbox(this.src)" />
-      <img src="images/ใบผ่านงาน/บิสโทร เดอ ฟลอร่า.png" alt="สำรับตัวอย่าง 3" loading="lazy" onclick="openLightbox(this.src)" />
-      <img src="images/ใบผ่านงาน/The Salares.png" alt="สำรับตัวอย่าง 4" loading="lazy" onclick="openLightbox(this.src)" />
-      <img src="images/ใบผ่านงาน/Bulwark.png" alt="สำรับตัวอย่าง 5" loading="lazy" onclick="openLightbox(this.src)" />
-
+        <img src="images/ใบผ่านงาน/ปากน้ำกระบี่ซีฟู้ด.png" alt="สำรับตัวอย่าง 1" loading="lazy" onclick="openLightbox(this.src)" />
+        <img src="images/ใบผ่านงาน/ฟาร์มรักดี.png" alt="สำรับตัวอย่าง 2" loading="lazy" onclick="openLightbox(this.src)" />
+        <img src="images/ใบผ่านงาน/บิสโทร เดอ ฟลอร่า.png" alt="สำรับตัวอย่าง 3" loading="lazy" onclick="openLightbox(this.src)" />
+        <img src="images/ใบผ่านงาน/The Salares.png" alt="สำรับตัวอย่าง 4" loading="lazy" onclick="openLightbox(this.src)" />
+        <img src="images/ใบผ่านงาน/Bulwark.png" alt="สำรับตัวอย่าง 5" loading="lazy" onclick="openLightbox(this.src)" />
       </div>
-
     </div>
-
     <div class="back-link">
       <p><a href="index.html">← กลับสู่หน้าหลัก</a></p>
     </div>
   </section>
-
   <!-- Lightbox overlay -->
-  <div id="lightbox" onclick="closeLightbox(event)">
-  <span class="close">&times;</span>
-  <img id="lightbox-img" src="" alt="Zoom Image">
+  <div id="lightbox" onclick="closeLightbox(event)" style="display:none;">
+    <span class="close" onclick="closeLightbox(event)">&times;</span>
+    <img id="lightbox-img" src="" alt="Zoom Image">
   </div>
   <footer>
     <p>&copy; 2025 ไชโย แสงใส</p>
   </footer>
-
-  <script src="script.js">
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
