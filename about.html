@@ -9,18 +9,18 @@
 <body>
   <header>
     <h1>ประวัติ</h1>
-    <div class="menu-toggle" id="menu-toggle">☰</div> <!-- ✅ เหลือตัวเดียว พร้อม id -->
+    <div class="menu-toggle" id="menu-toggle">☰</div>
     <nav class="navbar">
-  <ul class="nav-links" id="nav-links">
-    <li><a href="index.html">หน้าหลัก</a></li>
-    <li><a href="intro.html">คำนำ</a></li>
-          <li><a href="about.html">ประวัติ</a></li>
-          <li><a href="skills.html">ทักษะ</a></li>
-          <li><a href="gallery.html">ผลงาน</a></li>
-          <li><a href="cv.html">ประวัติการทำงาน</a></li>
-          <li><a href="contact.html">ติดต่อ</a></li>
-  </ul>
-</nav>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">หน้าหลัก</a></li>
+        <li><a href="intro.html">คำนำ</a></li>
+        <li><a href="about.html">ประวัติ</a></li>
+        <li><a href="skills.html">ทักษะ</a></li>
+        <li><a href="gallery.html">ผลงาน</a></li>
+        <li><a href="cv.html">ประวัติการทำงาน</a></li>
+        <li><a href="contact.html">ติดต่อ</a></li>
+      </ul>
+    </nav>
   </header>
 
   <section class="content-split">
@@ -42,29 +42,55 @@
       <p>
         .....
       </p>
-
-      <div class="back-link">
-        <p><a href="index.html">← กลับสู่หน้าหลัก</a></p>
-      </div>
     </div>
 
     <div class="photo">
       <img src="images/ภาพส่วนบุคคล/ที่โต๊ะทำงาน.png" alt="ภาพประวัติส่วนตัว" />
     </div>
   </section>
+  
+  <section id="gallery">
+    <h3>ประวัติการทำงาน</h3>
+    <div class="gallery">
+      <div class="photo">
+        <img src="images/ใบผ่านงาน/ปากน้ำกระบี่ซีฟู้ด.png" alt="สำรับตัวอย่าง 1" loading="lazy" onclick="openLightbox(this.src)" />
+        <img src="images/ใบผ่านงาน/ฟาร์มรักดี.png" alt="สำรับตัวอย่าง 2" loading="lazy" onclick="openLightbox(this.src)" />
+        <img src="images/ใบผ่านงาน/บิสโทร เดอ ฟลอร่า.png" alt="สำรับตัวอย่าง 3" loading="lazy" onclick="openLightbox(this.src)" />
+        <img src="images/ใบผ่านงาน/The Salares.png" alt="สำรับตัวอย่าง 4" loading="lazy" onclick="openLightbox(this.src)" />
+        <img src="images/ใบผ่านงาน/Bulwark.png" alt="สำรับตัวอย่าง 5" loading="lazy" onclick="openLightbox(this.src)" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Lightbox overlay -->
+  <div id="lightbox" onclick="closeLightbox(event)" style="display:none;">
+    <span class="close" onclick="closeLightbox(event)">&times;</span>
+    <img id="lightbox-img" src="" alt="Zoom Image">
+  </div>
+
+  <div class="back-link">
+    <p><a href="index.html">← กลับสู่หน้าหลัก</a></p>
+  </div>
 
   <footer>
     <p>&copy; 2025 ไชโย แสงใส</p>
   </footer>
 
-<script>
-  const menuToggle = document.getElementById('menu-toggle');
-  const navLinks = document.getElementById('nav-links');
+  <script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const navLinks = document.getElementById('nav-links');
+    menuToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
 
-  menuToggle.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
-  });
-</script>
-
-</body>
-</html>
+    // Lightbox functions
+    function openLightbox(src) {
+      document.getElementById('lightbox-img').src = src;
+      document.getElementById('lightbox').style.display = 'flex';
+    }
+    function closeLightbox(event) {
+      if (event.target.id === 'lightbox' || event.target.className === 'close') {
+        document.getElementById('lightbox').style.display = 'none';
+      }
+    }
+  </script>
